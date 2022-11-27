@@ -16,6 +16,11 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
+    <nav>
+      <a href="/">Home</a>
+      <a href="about">About me</a>
+      <a href="blog">Blog</a>
+    </nav>
     <slot />
   </body>
 </html>
@@ -30,5 +35,14 @@ const { title } = Astro.props;
   }
   code {
     font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+  }
+  nav a {
+    text-decoration: none;
+    color: #f6f6f6;
+    font-size: xx-large;
+    margin: 1rem;
+  }
+  nav a:hover {
+    color: var(--accent-gradient);
   }
 </style>
